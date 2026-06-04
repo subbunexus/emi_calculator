@@ -8,7 +8,8 @@ spark.sql('DROP TABLE IF EXISTS hdfc_pyspark.lab3.day2_loan_demo')
 
 data = [(1, 'Alice', 500000, 12, 36),
         (2, 'Bob', 300000, 15, 24),
-        (3, 'Charlie', 1000000, 10, 60)]
+        (3, 'Charlie', 1000000, 10, 60)
+        (4, 'Diana', 750000, 11, 48)]
 
 df = spark.createDataFrame(data, ['id', 'name', 'amount', 'rate', 'tenure'])
 df = df.withColumn('monthly_emi',
